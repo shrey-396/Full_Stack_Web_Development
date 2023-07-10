@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salary Analyzer</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script>
+function analyzeSalaries(salaries) {
+var minSalary = Math.min(...salaries);
+var maxSalary = Math.max(...salaries);
+return [minSalary, maxSalary];
+}
+function displayResults() {
+var salaries = [30000, 45000, 60000, 25000, 80000];
+var [minSalary, maxSalary] = analyzeSalaries(salaries);
+var resultText =
+"Minimum salary: " + minSalary + "<br>" +
+"Maximum salary: " + maxSalary;
+document.getElementById("results").innerHTML = resultText;
+}
+
+</script>
+</head>
+<body>
+<button type="button" class="btn btn-primary" onclick="displayResults()">Analyze Salaries</button>
+<div id="results"></div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
