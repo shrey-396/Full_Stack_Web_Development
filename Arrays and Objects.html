@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Favorite Books</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+#bookList {
+margin-top: 30px;
+}
+</style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+function displayBooks(books) {
+var resultText = "";
+for (var i = 0; i < books.length; i++) {
+resultText += books[i] + "<br>";
+}
+document.getElementById("bookList").innerHTML = resultText;
+}
+function showFavoriteBooks() {
+var favoriteBooks = [
+"Ramayan",
+"Bhagwat Geeta", "Mahabharat"
+];
+displayBooks(favoriteBooks);
+}
+</script>
+</head>
+<body>
+<div class="container">
+<button type="button" class="btn btn-primary" onclick="showFavoriteBooks()">Show Favorite
+Books</button>
+<div id="bookList"></div>
+</div>
+</body>
+</html>
