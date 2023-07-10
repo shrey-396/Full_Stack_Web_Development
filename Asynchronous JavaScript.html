@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Async Operation Example</title>
+<script>
+function simulateAsyncOperation(callback) {
+setTimeout(function() {
+var result = "Operation completed successfully!";
+callback(null, result);
+}, 2000);
+}
+function handleResult(error, result) {
+if (error) {
+console.log("Error:", error);
+} else {
+console.log("Result:", result);
+}
+}
+function performOperation() {
+simulateAsyncOperation(handleResult);
+}
+</script>
+</head>
+<body>
+<h2>Async Operation Example</h2>
+<button type="button" onclick="performOperation()">Perform Operation</button>
+</body>
+</html>
